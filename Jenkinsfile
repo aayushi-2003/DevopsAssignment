@@ -4,7 +4,9 @@ pipeline {
     stages {
 
         stage('Initialize'){
-            echo 'Intializing'
+            steps{
+                echo 'Intializing'
+            }
         }
 
         stage('Verify Docker'){
