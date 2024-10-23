@@ -1,15 +1,12 @@
 pipeline {
     agent any
-    environment{
-        DOCKER_PATH = 'C:\\Program Files\\Docker\\Docker\\resources\\bin'
-    }
     stages {
 
         stage('Initialize') {
             steps {
                 script {
-                    env.PATH = "${DOCKER_PATH}:${env.PATH}"
-                    echo "PATH: ${env.PATH}"
+                    env.PATH = "C:\\Program Files\\Docker\\Docker\\resources\\bin;${env.PATH}"
+                    echo 'Docker path updated.'
                 }
             }
         }
