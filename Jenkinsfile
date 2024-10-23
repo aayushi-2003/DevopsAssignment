@@ -19,7 +19,7 @@ pipeline {
                     sh 'docker rm factorial-web-app || true'
 
                     // Run the Docker container
-                    sh 'docker run -d -p 8080:80 --name factorial-web-app factorial-web-app'
+                    sh 'docker run -d -p 8090:80 factorial-web-app factorial-web-app'
                 }
             }
         }
@@ -27,7 +27,6 @@ pipeline {
 
     post {
         always {
-            // Cleanup
             sh 'docker stop factorial-web-app || true'
             sh 'docker rm factorial-web-app || true'
         }
