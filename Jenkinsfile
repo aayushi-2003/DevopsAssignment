@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment{
-        DOCKER_PATH = 'C:\Program Files\Docker\Docker\resources\bin'
+        DOCKER_PATH = 'C:\\Program Files\\Docker\\Docker\\resources\\bin'
     }
     stages {
 
@@ -13,7 +13,7 @@ pipeline {
                 }
             }
         }
-        
+
         stage('Verify Docker'){
             steps{
                 script{
